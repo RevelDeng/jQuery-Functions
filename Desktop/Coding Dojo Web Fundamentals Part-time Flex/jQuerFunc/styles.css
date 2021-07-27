@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.red {
+    color: red;
+}
+
+h5 {
+    font-size: large;
+}
+
+h6 {
+    font-size: large;
+}
+
+#chnghtml {
+    background-color: chartreuse;
+}

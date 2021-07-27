@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Functions</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('h1').click(function() {
+                    $(this).toggle(600, function() {
+                        $(this).show(300)
+                    })
+                    $(this).text("Toggle and Show and Clicked")
+                })
+                $('h2').click(function() {
+                    $(this).hide(function() {
+                        $(this).slideDown()
+                    })
+                })
+                $('h3').click(function() {
+                    $(this).slideUp(function() {
+                        $(this).slideToggle()
+                    })
+                })
+                $('h4').click(function() {
+                    $(this).fadeOut(function() {
+                        $(this).fadeIn()
+                    })
+                })
+                $('h5').click(function() {
+                    $(this).addClass("red")
+                })
+                $('h6').click(function() {
+                    $(this).before("More")
+                })
+                $('p:first-of-type').click(function() {
+                    $(this).after("wOw ")
+                })
+                $('p:nth-of-type(2)').dblclick(function() {
+                    $(this).append(" hi")
+                })
+                $('#chnghtml').click(function() {
+                    $(this).html("Green Line")
+                })
+                $('p:nth-of-type(3)').click(function() {
+                    $(this).attr("class", "red")
+                })
+                $('textarea').change(function() {
+                    $(this).after($(this).val())
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Toggle and Show</h1>
+        <h2>Hide and slideDown</h2>
+        <h3>slideUp and slideToggle</h3>
+        <h4>fadeIn & fadeOut</h4>
+        <h5>addClass</h5>
+        <h6>before</h6>
+        <p>Click</p>
+        <p>Double Click</p>
+        <div id="chnghtml">
+            div:
+            <div>background</div>
+        </div>
+        <p>Attr</p>
+        <textarea></textarea>
+    </body>
+</html>
